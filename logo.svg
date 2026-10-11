@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-labelledby="t">
+  <title id="t">The Alchemist</title>
+  <rect width="300" height="64" rx="10" fill="#1B0B26"/>
+  <g transform="translate(8 8)">
+    <path d="M12.3 30.6c3.6-2.6 7.6-2.6 11.7 0s8.1 2.6 11.7 0a11.8 11.8 0 0 1-23.4 0z" fill="#FF2E88"/>
+    <path d="M17.6 33.6c1.6 2.4 4.4 3.2 6.6 2 2.3-1.2 2.4-4.3.5-5.4-1.5-.9-3.3.1-3 1.7" fill="none" stroke="#FF8A00" stroke-width="2" stroke-linecap="round"/>
+    <path d="M19.5 4.5h9M21 4.5v12.6a13.4 13.4 0 1 0 6 0V4.5" fill="none" stroke="#FFF1E6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M38.5 5.5l1.3 3.4 3.4 1.3-3.4 1.3-1.3 3.4-1.3-3.4-3.4-1.3 3.4-1.3z" fill="#00C2A8"/>
+    <circle cx="31" cy="22.5" r="1.5" fill="#00C2A8"/>
+  </g>
+  <text x="66" y="42" font-family="'Bagel Fat One', 'Arial Rounded MT Bold', sans-serif" font-size="27" fill="#FFF1E6">The Alchemist</text>
+  <path d="M68 50h120" stroke="#FF8A00" stroke-width="3" stroke-linecap="round"/>
+</svg>

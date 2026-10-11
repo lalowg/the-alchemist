@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE ALCHEMIST — More Than a Drink · Experimental beverage studio</title>
+<meta name="description" content="THE ALCHEMIST is an experimental beverage studio. Move six flavour dials and a living liquid answers: the bench writes the recipe and names a drink nobody has ordered before.">
+<meta name="theme-color" content="#1B0B26">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://the-alchemist-mu.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="THE ALCHEMIST">
+<meta property="og:title" content="THE ALCHEMIST — More Than a Drink">
+<meta property="og:description" content="An experimental beverage studio. Compose a flavour, watch it turn into a living liquid, and get a drink with a name of its own.">
+<meta property="og:url" content="https://the-alchemist-mu.vercel.app/">
+<meta property="og:image" content="https://the-alchemist-mu.vercel.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="THE ALCHEMIST — More Than a Drink">
+<meta name="twitter:description" content="Six flavour dials, one living liquid, a recipe and a name written on the spot.">
+<meta name="twitter:image" content="https://the-alchemist-mu.vercel.app/og.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&amp;family=Rethink+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.replace('no-js', 'js');</script>
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="mark" viewBox="0 0 48 48">
+      <path d="M12.3 30.6c3.6-2.6 7.6-2.6 11.7 0s8.1 2.6 11.7 0a11.8 11.8 0 0 1-23.4 0z" fill="#FF2E88"/>
+      <path d="M17.6 33.6c1.6 2.4 4.4 3.2 6.6 2 2.3-1.2 2.4-4.3.5-5.4-1.5-.9-3.3.1-3 1.7" fill="none" stroke="#FF8A00" stroke-width="2" stroke-linecap="round"/>
+      <path d="M19.5 4.5h9M21 4.5v12.6a13.4 13.4 0 1 0 6 0V4.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M38.5 5.5l1.3 3.4 3.4 1.3-3.4 1.3-1.3 3.4-1.3-3.4-3.4-1.3 3.4-1.3z" fill="#00C2A8"/>
+      <circle cx="31" cy="22.5" r="1.5" fill="#00C2A8"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="hdr" id="top">
+  <a class="brand" href="#compose" aria-label="The Alchemist — back to the composer">
+    <svg class="brand-mark" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+    <span class="brand-word" aria-hidden="true">The Alchemist</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <ul>
+      <li><a href="#compose"><span aria-hidden="true">01</span>Compose</a></li>
+      <li><a href="#elements"><span aria-hidden="true">02</span>Elements</a></li>
+      <li><a href="#methods"><span aria-hidden="true">03</span>Methods</a></li>
+      <li><a href="#shelf"><span aria-hidden="true">04</span>Shelf</a></li>
+      <li><a href="#studio"><span aria-hidden="true">05</span>Studio</a></li>
+      <li><a href="#book" class="nav-cta"><span aria-hidden="true">06</span>Book the bench</a></li>
+    </ul>
+  </nav>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">
+    <span class="menu-flask" aria-hidden="true"><span></span></span>
+    <span class="menu-label">Menu</span>
+  </button>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ============================================================ 01 COMPOSE -->
+<section class="hero" id="compose" aria-labelledby="hero-title">
+  <div class="plate-marks" aria-hidden="true">
+    <span class="reg reg-tl"></span><span class="reg reg-tr"></span><span class="reg reg-bl"></span>
+    <span class="plate-id">Plate 01 / 06 — Flavour composer</span>
+    <span class="plate-side">Experimental beverage studio · composition generator · batch log open</span>
+  </div>
+
+  <div class="hero-head">
+    <p class="kicker"><span class="dot" aria-hidden="true"></span>Experimental beverage studio</p>
+    <h1 id="hero-title" class="hero-title"><span class="ht-1">More</span> <span class="ht-2">than a</span> <span class="ht-3">drink.</span></h1>
+    <p class="lede">Turn the six flavour dials. The liquid answers in real time, the bench writes the recipe, and the drink gets a name nobody has ordered before.</p>
+  </div>
+
+  <figure class="specimen" aria-labelledby="specimen-cap">
+    <div class="specimen-stage" id="stage">
+      <div class="specimen-fallback" aria-hidden="true"><span class="fb-a"></span><span class="fb-b"></span><span class="fb-c"></span><span class="fb-glint"></span></div>
+      <canvas class="liquid" id="liquid" aria-hidden="true"></canvas>
+      <svg class="wheel" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <circle class="wheel-track" cx="50" cy="50" r="46.6"/>
+        <g class="wheel-arcs"></g>
+        <g class="wheel-labels"></g>
+      </svg>
+    </div>
+    <ul class="readings" aria-label="Specimen readings">
+      <li class="rd rd-1"><span>Viscosity</span><b data-read="vis">0.41</b></li>
+      <li class="rd rd-2"><span>Turbidity</span><b data-read="turb">0.24</b></li>
+      <li class="rd rd-3"><span>Pressure</span><b data-read="bar">2.7 bar</b></li>
+      <li class="rd rd-4"><span>Acidity</span><b data-read="ph">pH 3.6</b></li>
+    </ul>
+    <figcaption id="specimen-cap" class="specimen-cap"><span class="cap-fig">Fig. 1</span> Live specimen, seen from above. <span class="cap-how">Drag across the glass to stir it.</span></figcaption>
+  </figure>
+
+  <div class="namecard">
+    <p class="nc-label">Batch <span data-batch>001</span> · generated name</p>
+    <p class="nc-name" data-name>Restless Lightning</p>
+    <p class="nc-formula" data-formula>Sw6 Ac7 Bi2 Gr4 Sm1 Fz7</p>
+    <p class="sr-only" aria-live="polite" data-live></p>
+  </div>
+
+  <div class="desk" role="group" aria-labelledby="desk-title">
+    <div class="desk-head">
+      <h2 id="desk-title" class="desk-title">Flavour desk</h2>
+      <p class="desk-note">0 = absent · 10 = loud</p>
+    </div>
+    <div class="dials">
+      <div class="dial" style="--c:#FF2E88"><label for="f-sweet"><span class="sym" aria-hidden="true">Sw</span><span class="lbl">Sweet</span></label><input type="range" id="f-sweet" data-axis="sweet" min="0" max="10" step="1" value="6" aria-describedby="h-sweet"><output for="f-sweet" data-out="sweet">06</output><span class="hint" id="h-sweet">fruit, nectar, honeyed depth</span></div>
+      <div class="dial" style="--c:#FFA21F"><label for="f-sour"><span class="sym" aria-hidden="true">Ac</span><span class="lbl">Sour</span></label><input type="range" id="f-sour" data-axis="sour" min="0" max="10" step="1" value="7" aria-describedby="h-sour"><output for="f-sour" data-out="sour">07</output><span class="hint" id="h-sour">citrus, acid, brightness</span></div>
+      <div class="dial" style="--c:#E0397A"><label for="f-bitter"><span class="sym" aria-hidden="true">Bi</span><span class="lbl">Bitter</span></label><input type="range" id="f-bitter" data-axis="bitter" min="0" max="10" step="1" value="2" aria-describedby="h-bitter"><output for="f-bitter" data-out="bitter">02</output><span class="hint" id="h-bitter">root, bark, pith, cacao</span></div>
+      <div class="dial" style="--c:#00C2A8"><label for="f-green"><span class="sym" aria-hidden="true">Gr</span><span class="lbl">Botanical</span></label><input type="range" id="f-green" data-axis="green" min="0" max="10" step="1" value="4" aria-describedby="h-green"><output for="f-green" data-out="green">04</output><span class="hint" id="h-green">leaf, herb, garden</span></div>
+      <div class="dial" style="--c:#A895C2"><label for="f-smoke"><span class="sym" aria-hidden="true">Sm</span><span class="lbl">Smoke</span></label><input type="range" id="f-smoke" data-axis="smoke" min="0" max="10" step="1" value="1" aria-describedby="h-smoke"><output for="f-smoke" data-out="smoke">01</output><span class="hint" id="h-smoke">tea smoke, char, resin</span></div>
+      <div class="dial" style="--c:#F4ECFF"><label for="f-fizz"><span class="sym" aria-hidden="true">Fz</span><span class="lbl">Fizz</span></label><input type="range" id="f-fizz" data-axis="fizz" min="0" max="10" step="1" value="7" aria-describedby="h-fizz"><output for="f-fizz" data-out="fizz">07</output><span class="hint" id="h-fizz">carbonation, ferment, lift</span></div>
+    </div>
+    <fieldset class="strength">
+      <legend>Strength</legend>
+      <label><input type="radio" name="strength" value="zero" checked><span>Zero-proof</span></label>
+      <label><input type="radio" name="strength" value="low"><span>Low</span></label>
+      <label><input type="radio" name="strength" value="full"><span>Full</span></label>
+    </fieldset>
+    <div class="desk-actions">
+      <button class="btn btn-hot" type="button" data-transmute><span class="btn-ico" aria-hidden="true">✶</span>Transmute</button>
+      <button class="btn" type="button" data-stir>Stir the glass</button>
+      <button class="btn" type="button" data-save>Save to shelf</button>
+      <button class="btn btn-quiet" type="button" data-motion aria-pressed="false">Pause liquid</button>
+    </div>
+    <p class="desk-status" role="status" data-status></p>
+  </div>
+
+  <div class="ticket" aria-labelledby="ticket-title">
+    <h2 class="ticket-title" id="ticket-title"><span>Bench ticket</span><span class="ticket-sub">written from your dials</span></h2>
+    <dl class="ticket-grid">
+      <div><dt>Base</dt><dd data-r="base">Clarified yuzu</dd></div>
+      <div><dt>Strength</dt><dd data-r="spirit">Spirit-free</dd></div>
+      <div><dt>Modifiers</dt><dd data-r="mods">Koji, Lychee</dd></div>
+      <div><dt>Garnish</dt><dd data-r="garnish">Expressed bergamot peel</dd></div>
+      <div><dt>Glass</dt><dd data-r="glass">Highball</dd></div>
+      <div><dt>Method</dt><dd data-r="method">Force-carbonated at 3.4 bar</dd></div>
+      <div><dt>Serve at</dt><dd data-r="temp">−2 °C</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============================================================ 02 ELEMENTS -->
+<section class="elements" id="elements" aria-labelledby="el-title">
+  <header class="sec-head">
+    <p class="sec-no"><span>Plate 02</span><span aria-hidden="true">—</span><span>Elements</span></p>
+    <h2 class="sec-title fill-title" id="el-title">The periodic table of flavour</h2>
+    <p class="sec-lede">Eighteen ingredients live on our bench, arranged like elements. Each column is a family. Each row is a step up in intensity, from a whisper in period 1 to a shout in period 3.</p>
+  </header>
+  <div class="el-filters" role="group" aria-label="Filter elements by family">
+    <button type="button" class="chip" data-fam="all" aria-pressed="true">All families</button>
+    <button type="button" class="chip" data-fam="sour" aria-pressed="false" style="--c:#FFA21F">Acids</button>
+    <button type="button" class="chip" data-fam="sweet" aria-pressed="false" style="--c:#FF2E88">Sugars</button>
+    <button type="button" class="chip" data-fam="bitter" aria-pressed="false" style="--c:#E0397A">Bitters</button>
+    <button type="button" class="chip" data-fam="green" aria-pressed="false" style="--c:#00C2A8">Botanicals</button>
+    <button type="button" class="chip" data-fam="smoke" aria-pressed="false" style="--c:#A895C2">Smokes</button>
+    <button type="button" class="chip" data-fam="fizz" aria-pressed="false" style="--c:#E9DDF7">Ferments</button>
+  </div>
+  <div class="el-layout">
+    <div class="ptable-wrap">
+      <div class="ptable" id="ptable" role="group" aria-label="Ingredients, arranged by family and intensity"></div>
+      <p class="ptable-key" aria-hidden="true"><span>Period 1 — light</span><span>Period 2 — present</span><span>Period 3 — loud</span></p>
+      <noscript><p class="nojs">The interactive table needs JavaScript. Our eighteen ingredients run from bergamot, yuzu and finger lime through gentian, shiso and lapsang to kombucha and koji.</p></noscript>
+    </div>
+    <aside class="el-detail" id="el-detail" aria-live="polite" aria-labelledby="eld-name">
+      <div class="eld-tile"><span class="eld-n" data-eld="n">2</span><span class="eld-sym" data-eld="sym">Yz</span><span class="eld-fam" data-eld="fam">Acids · period 2</span></div>
+      <h3 class="eld-name" id="eld-name" data-eld="name">Yuzu</h3>
+      <p class="eld-note" data-eld="note">Somewhere between mandarin, grapefruit and lime. Our default acid, clarified until it pours like glass.</p>
+      <dl class="eld-facts">
+        <div><dt>How we use it</dt><dd data-eld="use">Clarified juice</dd></div>
+        <div><dt>Pairs with</dt><dd data-eld="pairs">Lychee, Koji, Lemongrass</dd></div>
+      </dl>
+      <div class="eld-bars" data-eld="bars" aria-label="Flavour profile"></div>
+      <button class="btn btn-hot eld-dose" type="button" data-dose><span class="btn-ico" aria-hidden="true">↑</span>Dose into the composer</button>
+    </aside>
+  </div>
+</section>
+
+<!-- ============================================================ 03 METHODS -->
+<section class="methods" id="methods" aria-labelledby="me-title">
+  <header class="sec-head">
+    <p class="sec-no"><span>Plate 03</span><span aria-hidden="true">—</span><span>Methods</span></p>
+    <h2 class="sec-title fill-title" id="me-title">Four transmutations</h2>
+    <p class="sec-lede">Nothing on the shelf is poured straight from a bottle. Every drink passes through at least one of these four processes before it reaches the glass.</p>
+  </header>
+  <div class="me-wrap">
+    <div class="me-sticky">
+      <figure class="apparatus-fig">
+        <svg class="apparatus" id="apparatus" data-step="1" viewBox="0 0 400 460" role="img" aria-labelledby="app-cap">
+          <defs>
+            <linearGradient id="ap-liq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="ap-s1"/><stop offset="1" class="ap-s2"/></linearGradient>
+            <clipPath id="ap-clip"><path d="M168 126V196L92 346Q80 372 106 384H294Q320 372 308 346L232 196V126Z"/></clipPath>
+            <pattern id="ap-dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#FFF1E6" opacity=".35"/></pattern>
+          </defs>
+          <g class="ap-bench"><path d="M20 404H380" /><path d="M40 404V440M360 404V440"/></g>
+          <g class="ap-scale" aria-hidden="true">
+            <path d="M338 170V384M332 190H344M334 214H342M332 238H344M334 262H342M332 286H344M334 310H342M332 334H344M334 358H342"/>
+            <text x="350" y="194">500</text><text x="350" y="290">250</text><text x="350" y="362">50</text>
+          </g>
+          <g clip-path="url(#ap-clip)">
+            <rect class="ap-liquid" x="60" y="230" width="280" height="200" fill="url(#ap-liq)"/>
+            <path class="ap-surface" d="M60 232Q110 222 160 232T260 232T360 232V244H60Z"/>
+            <g class="ap-st ap-st-1">
+              <rect x="60" y="232" width="280" height="200" fill="url(#ap-dots)" class="ap-cloud"/>
+              <path class="ap-curd" d="M100 384Q140 360 200 366T300 384Z"/>
+            </g>
+            <g class="ap-st ap-st-2">
+              <path class="ap-leaf" d="M150 330q30-50 70-36q-26 46-70 36z"/>
+              <path class="ap-leaf l2" d="M240 360q-20-46 22-58q12 40-22 58z"/>
+              <path class="ap-swirl" d="M170 320c20-30 60-40 70-10s-30 50-60 30-10-60 30-70"/>
+            </g>
+            <g class="ap-st ap-st-3">
+              <ellipse class="ap-culture" cx="200" cy="240" rx="88" ry="9"/>
+              <circle class="ap-b slow" cx="160" cy="360" r="9"/><circle class="ap-b slow d2" cx="224" cy="370" r="6"/><circle class="ap-b slow d3" cx="196" cy="340" r="7"/>
+            </g>
+            <g class="ap-st ap-st-4">
+              <circle class="ap-b fast" cx="150" cy="380" r="3"/><circle class="ap-b fast d2" cx="178" cy="380" r="2.5"/><circle class="ap-b fast d3" cx="206" cy="380" r="3.5"/><circle class="ap-b fast d4" cx="232" cy="380" r="2"/><circle class="ap-b fast d5" cx="256" cy="380" r="3"/><circle class="ap-b fast d6" cx="132" cy="380" r="2"/><circle class="ap-b fast d7" cx="276" cy="380" r="2.5"/>
+            </g>
+          </g>
+          <path class="ap-glass" d="M164 120H236M168 126V196L92 346Q80 372 106 384H294Q320 372 308 346L232 196V126"/>
+          <path class="ap-shine" d="M180 136V200L116 330"/>
+          <g class="ap-st ap-st-1 ap-top"><path class="ap-funnel" d="M140 40H260L214 104V122H186V104Z"/><path class="ap-paper" d="M152 48H248L210 98H190Z"/><path class="ap-drip" d="M200 126V150"/></g>
+          <g class="ap-st ap-st-2 ap-top"><rect class="ap-lid" x="150" y="96" width="100" height="22" rx="4"/><path class="ap-hose" d="M250 106H300Q320 106 320 86V40"/><text class="ap-label" x="262" y="34">vacuum −0.9 bar</text></g>
+          <g class="ap-st ap-st-3 ap-top"><path class="ap-lock" d="M186 118V84Q186 70 200 70Q214 70 214 84V96Q214 104 222 104Q230 104 230 96V64"/><text class="ap-label" x="236" y="62">airlock · 48 h</text></g>
+          <g class="ap-st ap-st-4 ap-top"><rect class="ap-lid" x="150" y="96" width="100" height="22" rx="4"/><path class="ap-hose" d="M150 106H96Q70 106 70 80V56"/><circle class="ap-gauge" cx="70" cy="40" r="22"/><path class="ap-needle" d="M70 40L84 28"/><text class="ap-label" x="98" y="34">3.5 bar CO₂</text></g>
+        </svg>
+        <figcaption class="app-cap" id="app-cap"><span class="cap-fig">Fig. 3.<span data-fig>1</span></span> <span data-figname>Clarify — curds settle and the liquid turns clear.</span></figcaption>
+      </figure>
+    </div>
+    <ol class="steps">
+      <li class="step is-active" data-step="1">
+        <p class="step-no" aria-hidden="true">I</p>
+        <h3>Clarify</h3>
+        <p>Citrus juice is cloudy and fades within an hour. We split it with a little milk or agar, let the curds fall, and filter slowly through paper. What comes out is bright, clear and steady for days.</p>
+        <p class="step-spec"><span>12 h</span><span>4 °C</span><span>Paper, patience</span></p>
+      </li>
+      <li class="step" data-step="2">
+        <p class="step-no" aria-hidden="true">II</p>
+        <h3>Infuse</h3>
+        <p>Leaves and roots go under vacuum with the liquid. When the pressure returns, flavour is pushed into the drink in minutes rather than days, so herbs taste fresh instead of stewed.</p>
+        <p class="step-spec"><span>10 min</span><span>−0.9 bar</span><span>Chamber sealer</span></p>
+      </li>
+      <li class="step" data-step="3">
+        <p class="step-no" aria-hidden="true">III</p>
+        <h3>Ferment</h3>
+        <p>Kombucha, water kefir and koji are living cultures. We feed them, wait, and taste every morning. Fermentation adds a soft natural fizz and a savoury depth that sugar alone cannot.</p>
+        <p class="step-spec"><span>2–10 days</span><span>22 °C</span><span>Airlocks, notebooks</span></p>
+      </li>
+      <li class="step" data-step="4">
+        <p class="step-no" aria-hidden="true">IV</p>
+        <h3>Carbonate</h3>
+        <p>Chilled to just above freezing, the finished drink is charged with carbon dioxide in a steel keg or bottle. Colder liquid holds more gas, so the bubbles stay fine and last to the final sip.</p>
+        <p class="step-spec"><span>Overnight</span><span>−1 °C</span><span>3.5 bar</span></p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================ 04 SHELF -->
+<section class="shelf" id="shelf" aria-labelledby="sh-title">
+  <header class="sec-head sh-head">
+    <p class="sec-no"><span>Plate 04</span><span aria-hidden="true">—</span><span>The shelf</span></p>
+    <h2 class="sec-title fill-title" id="sh-title">Season 04, on the shelf</h2>
+    <p class="sec-lede">Eight drinks that made it from the batch log to the bar. Open one to read its ticket, or load it into the composer and change it. <span class="tag-illus">Illustrative menu</span></p>
+  </header>
+  <div class="sh-bar">
+    <div class="sh-filters" role="group" aria-label="Filter the shelf">
+      <button type="button" class="chip" data-mood="all" aria-pressed="true">Everything</button>
+      <button type="button" class="chip" data-mood="bright" aria-pressed="false">Bright</button>
+      <button type="button" class="chip" data-mood="bitter" aria-pressed="false">Bitter</button>
+      <button type="button" class="chip" data-mood="smoky" aria-pressed="false">Smoky</button>
+      <button type="button" class="chip" data-mood="zero" aria-pressed="false">Zero-proof</button>
+    </div>
+    <div class="sh-nav">
+      <button type="button" class="round" data-shelf="prev" aria-label="Scroll the shelf left">←</button>
+      <button type="button" class="round" data-shelf="next" aria-label="Scroll the shelf right">→</button>
+    </div>
+  </div>
+  <div class="track-wrap">
+    <ul class="track" id="track" aria-label="Season 04 drinks"></ul>
+  </div>
+  <p class="sh-count" data-shelf-count aria-live="polite"></p>
+  <div class="mine" id="mine" hidden>
+    <h3 class="mine-title">Your batch log <span>(this browser session only)</span></h3>
+    <ul class="mine-list" data-mine></ul>
+  </div>
+</section>
+
+<dialog class="drink-dialog" id="drink-dialog" aria-labelledby="dd-name">
+  <div class="dd-inner">
+    <button class="dd-close" type="button" data-close aria-label="Close drink details">×</button>
+    <div class="dd-art" data-dd="art"></div>
+    <div class="dd-body">
+      <p class="dd-kicker" data-dd="kicker">Season 04</p>
+      <h3 class="dd-name" id="dd-name" data-dd="name">Neon Orchard</h3>
+      <p class="dd-line" data-dd="line"></p>
+      <p class="dd-formula" data-dd="formula"></p>
+      <dl class="dd-facts">
+        <div><dt>Glass</dt><dd data-dd="glass"></dd></div>
+        <div><dt>Method</dt><dd data-dd="method"></dd></div>
+        <div><dt>Garnish</dt><dd data-dd="garnish"></dd></div>
+        <div><dt>Strength</dt><dd data-dd="zero"></dd></div>
+      </dl>
+      <button class="btn btn-hot" type="button" data-load><span class="btn-ico" aria-hidden="true">↺</span>Load into the composer</button>
+    </div>
+  </div>
+</dialog>
+
+<!-- ============================================================ 05 STUDIO -->
+<section class="studio" id="studio" aria-labelledby="st-title">
+  <div class="ticker" aria-hidden="true"><div class="ticker-row"><span>Bergamot</span><span>Yuzu</span><span>Finger lime</span><span>White peach</span><span>Lychee</span><span>Date molasses</span><span>Chicory</span><span>Cacao nib</span><span>Gentian</span><span>Lemongrass</span><span>Fig leaf</span><span>Shiso</span><span>Black cardamom</span><span>Charred cedar</span><span>Lapsang</span><span>Water kefir</span><span>Kombucha</span><span>Koji</span></div></div>
+  <div class="st-grid">
+    <div class="st-manifesto">
+      <p class="sec-no"><span>Plate 05</span><span aria-hidden="true">—</span><span>The studio</span></p>
+      <h2 class="st-title" id="st-title">A drink is an experiment you get to <em>finish.</em></h2>
+      <p class="st-lede">The Alchemist is a bench, a batch log and a small bar in one room. We work like a test kitchen: every idea gets a number, every number gets tasted, and most of them never leave the notebook.</p>
+    </div>
+    <ol class="rules">
+      <li><span class="rule-n">01</span><h3>Start with a question</h3><p>“What does smoke taste like when it is cold?” comes before any recipe. The drink is the answer we can pour.</p></li>
+      <li><span class="rule-n">02</span><h3>Zero-proof gets equal time</h3><p>Spirit-free drinks go through the same clarifying, fermenting and testing as everything else. They are not an afterthought on the back page.</p></li>
+      <li><span class="rule-n">03</span><h3>Waste is an ingredient</h3><p>Squeezed citrus becomes cordial. Spent tea becomes smoke. Peach skins become syrup. The bin is the last stop, not the first.</p></li>
+      <li><span class="rule-n">04</span><h3>Write everything down</h3><p>Every batch has a number, a date and a tasting note. When a drink works, we can make it again. When it fails, we know why.</p></li>
+    </ol>
+    <div class="st-bench">
+      <svg class="bench-art" viewBox="0 0 320 220" aria-hidden="true" focusable="false">
+        <rect x="0" y="176" width="320" height="10" fill="#1B0B26"/>
+        <path d="M40 176V110h30v66M46 110V92h18v18" fill="#FF2E88" stroke="#1B0B26" stroke-width="3"/>
+        <path d="M100 176c-10 0-14-8-10-16l22-44V80h22v36l22 44c4 8 0 16-10 16z" fill="#00C2A8" stroke="#1B0B26" stroke-width="3"/>
+        <path d="M108 80h38" stroke="#1B0B26" stroke-width="3"/>
+        <circle cx="226" cy="140" r="36" fill="#FFF1E6" stroke="#1B0B26" stroke-width="3"/>
+        <path d="M216 104V60h20v44" fill="#FFF1E6" stroke="#1B0B26" stroke-width="3"/>
+        <path d="M192 146c12-8 22-8 34 0s22 8 34 0a34 34 0 0 1-68 0z" fill="#1B0B26"/>
+        <path d="M276 176v-60h20v60M272 116h28" fill="none" stroke="#1B0B26" stroke-width="3"/>
+        <circle cx="120" cy="150" r="4" fill="#FFF1E6"/><circle cx="132" cy="160" r="3" fill="#FFF1E6"/><circle cx="114" cy="164" r="2.5" fill="#FFF1E6"/>
+      </svg>
+      <dl class="bench-facts">
+        <div><dt>The room</dt><dd>Twelve stools at one long steel bench, facing the people making your drink.</dd></div>
+        <div><dt>Open</dt><dd>Thursday to Sunday, 5 pm until late. Lab Hours on Saturday afternoons.</dd></div>
+        <div><dt>Where</dt><dd>Arch 7, Dye Works Yard. A fictional address for a fictional studio.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 06 BOOK -->
+<section class="book" id="book" aria-labelledby="bk-title">
+  <div class="bk-poster">
+    <p class="sec-no"><span>Plate 06</span><span aria-hidden="true">—</span><span>Book</span></p>
+    <h2 class="bk-title" id="bk-title">Take a seat at the bench.</h2>
+    <p class="bk-lede">Three ways in. Choose a session and a date, and attach the drink you just composed if you would like us to start from it.</p>
+    <ul class="sessions" aria-label="Session types">
+      <li><b>Tasting Flight</b><span>Five drinks from the shelf, poured in order and explained. 75 minutes.</span></li>
+      <li><b>Lab Hour</b><span>Compose your own drink beside a bartender, from dials to glass. 60 minutes.</span></li>
+      <li><b>Commission</b><span>A drink designed for your event, named and written up for your menu.</span></li>
+    </ul>
+  </div>
+  <form class="bk-form" id="book-form" novalidate aria-describedby="bk-demo">
+    <p class="bk-demo" id="bk-demo">Portfolio demo — nothing you enter here is sent or stored.</p>
+    <div class="field">
+      <label for="bk-name">Your name</label>
+      <input id="bk-name" name="name" type="text" autocomplete="name" required aria-describedby="bk-name-err">
+      <p class="err" id="bk-name-err" hidden></p>
+    </div>
+    <div class="field">
+      <label for="bk-email">Email</label>
+      <input id="bk-email" name="email" type="email" autocomplete="email" required aria-describedby="bk-email-err">
+      <p class="err" id="bk-email-err" hidden></p>
+    </div>
+    <fieldset class="field seg">
+      <legend>Session</legend>
+      <label><input type="radio" name="session" value="Tasting Flight" required><span>Tasting Flight</span></label>
+      <label><input type="radio" name="session" value="Lab Hour"><span>Lab Hour</span></label>
+      <label><input type="radio" name="session" value="Commission"><span>Commission</span></label>
+      <p class="err" id="bk-session-err" hidden></p>
+    </fieldset>
+    <div class="field-row">
+      <div class="field">
+        <label for="bk-date">Preferred date</label>
+        <input id="bk-date" name="date" type="date" required aria-describedby="bk-date-err">
+        <p class="err" id="bk-date-err" hidden></p>
+      </div>
+      <div class="field">
+        <label for="bk-guests">Guests</label>
+        <select id="bk-guests" name="guests">
+          <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option>
+        </select>
+      </div>
+    </div>
+    <label class="attach"><input type="checkbox" name="attach" checked><span>Attach my composition: <b data-attach>Restless Lightning</b></span></label>
+    <div class="field">
+      <label for="bk-notes">Anything we should know? <span class="opt">(optional)</span></label>
+      <textarea id="bk-notes" name="notes" rows="3" maxlength="400"></textarea>
+    </div>
+    <button class="btn btn-hot btn-big" type="submit"><span class="btn-ico" aria-hidden="true">✶</span>Request a seat</button>
+    <div class="bk-done" id="bk-done" role="status" tabindex="-1" hidden></div>
+  </form>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-word" aria-hidden="true"><span>The</span><span>Alchemist</span></div>
+  <div class="ftr-grid">
+    <div class="ftr-brand">
+      <svg class="ftr-mark" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+      <p>More than a drink. An experimental beverage studio and bench bar.</p>
+    </div>
+    <nav class="ftr-nav" aria-label="Footer">
+      <ul>
+        <li><a href="#compose">Compose</a></li>
+        <li><a href="#elements">Elements</a></li>
+        <li><a href="#methods">Methods</a></li>
+        <li><a href="#shelf">Shelf</a></li>
+        <li><a href="#studio">Studio</a></li>
+        <li><a href="#book">Book the bench</a></li>
+      </ul>
+    </nav>
+    <div class="credit">
+      <p class="credit-label">Batch credits</p>
+      <p class="credit-by">Designed &amp; built by <a href="https://www.linkedin.com/in/saadbashirmarketing/" target="_blank" rel="noopener" aria-label="Saad Bashir on LinkedIn (opens in a new tab)">Saad Bashir</a></p>
+      <p class="credit-note">Fictional concept brand — portfolio project.</p>
+      <a class="credit-more" href="https://saadbashirportfolio.vercel.app/websites.html">More work <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <p class="ftr-fine">Drinks, menus, sessions and the address are illustrative. Generated recipes are playful sketches, not instructions. Please drink responsibly.</p>
+</footer>
+</body>
+</html>
